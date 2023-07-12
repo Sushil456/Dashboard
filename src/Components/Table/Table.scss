@@ -1,0 +1,15 @@
+.status{
+    padding: 5px;
+    border-radius: 5px;
+
+    &.approved{
+        color:green;
+        background-color: lightgreen;
+    }
+
+    &.pending{
+        color: gray;
+        background-color: lightgray;
+        
+    }
+}
