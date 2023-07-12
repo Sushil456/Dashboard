@@ -1,3 +1,4 @@
+import { Datatable } from "../../Components/DataTable/Datatable"
 import { Navbar } from "../../Components/Navbar/Navbar"
 import { Sidebar } from "../../Components/Sidebar/Sidebar"
 import './List.scss'
@@ -7,7 +8,7 @@ export const List = () => {
       <Sidebar />
       <div className="listContainer">
         <Navbar />
-          data table
+          <Datatable />
       </div>
     </div>
   )
