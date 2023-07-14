@@ -12,9 +12,14 @@ import FitbitIcon from '@mui/icons-material/Fitbit';
 import LogoutIcon from '@mui/icons-material/Logout';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { DarkModeContext } from '../../Context/DarkModeContext';
 
 
 export const Sidebar = () => {
+
+    const {dispatch} = useContext(DarkModeContext);
+
   return (
     <div className="sidebar">
         <div className="top">
@@ -87,9 +92,8 @@ export const Sidebar = () => {
             </ul>
         </div>
         <div className="bottom">
-            <div className="colorOption"></div>
-            <div className="colorOption"></div>
-            <div className="colorOption"></div>
+            <div className="colorOption" onClick={()=> dispatch({type:'LIGHT'})} ></div>
+            <div className="colorOption" onClick={()=> dispatch({type:'DARK'})} ></div>
         </div>
     </div>
   )
