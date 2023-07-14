@@ -11,13 +11,16 @@ import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import FitbitIcon from '@mui/icons-material/Fitbit';
 import LogoutIcon from '@mui/icons-material/Logout';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
+import { Link } from 'react-router-dom';
 
 
 export const Sidebar = () => {
   return (
     <div className="sidebar">
         <div className="top">
-            <div className="log">Tools Team</div>
+            <Link to='/' style={{textDecoration:'none'}}>
+                <span className="logo">Team Dashboard</span>
+            </Link>
         </div>
         <hr />
         <div className="center">
@@ -28,14 +31,20 @@ export const Sidebar = () => {
                     <span>Dashboard</span>
                 </li>
                 <p className="title">LISTS</p>
+                <Link to='/users' style={{textDecoration:'none'}}>
                 <li>
                     <PersonIcon  />
                     <span>Users</span>
                 </li>
+                </Link>
+
+                <Link to='/products' style={{textDecoration:'none'}}>
                 <li>
                     <AccountBoxIcon/>
                     <span>Products</span>
                 </li>
+                </Link>
+
                 <li>
                     <ShoppingCartIcon/>
                     <span>Orders</span>
